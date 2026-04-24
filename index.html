@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>肖女士天气网 - 城市天气查询</title>
+    <meta name="description" content="城市天气查询，支持热门城市、地级市、县区天气、未来天气、24小时天气、空气质量和生活指数。">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <link rel="canonical" href="https://tianqi.xiaonvshi.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="肖女士天气网 - 城市天气查询">
+    <meta property="og:description" content="城市天气查询，支持热门城市、地级市、县区天气、未来天气、24小时天气、空气质量和生活指数。">
+    <meta property="og:url" content="https://tianqi.xiaonvshi.com/">
+    <meta property="og:site_name" content="肖女士天气网">
+    <link rel="stylesheet" href="./style.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"肖女士天气网","url":"https://tianqi.xiaonvshi.com","potentialAction":{"@type":"SearchAction","target":"https://tianqi.xiaonvshi.com/city/{search_term_string}.html","query-input":"required name=search_term_string"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"name":"北京","url":"https://tianqi.xiaonvshi.com/city/101010100.html"},{"@type":"ListItem","position":2,"name":"上海","url":"https://tianqi.xiaonvshi.com/city/101020100.html"},{"@type":"ListItem","position":3,"name":"天津","url":"https://tianqi.xiaonvshi.com/city/101030100.html"},{"@type":"ListItem","position":4,"name":"重庆","url":"https://tianqi.xiaonvshi.com/city/101040100.html"},{"@type":"ListItem","position":5,"name":"广州","url":"https://tianqi.xiaonvshi.com/city/101280101.html"},{"@type":"ListItem","position":6,"name":"杭州","url":"https://tianqi.xiaonvshi.com/city/101210101.html"},{"@type":"ListItem","position":7,"name":"南京","url":"https://tianqi.xiaonvshi.com/city/101190101.html"},{"@type":"ListItem","position":8,"name":"武汉","url":"https://tianqi.xiaonvshi.com/city/101200101.html"},{"@type":"ListItem","position":9,"name":"成都","url":"https://tianqi.xiaonvshi.com/city/101270101.html"},{"@type":"ListItem","position":10,"name":"福州","url":"https://tianqi.xiaonvshi.com/city/101230101.html"},{"@type":"ListItem","position":11,"name":"长沙市","url":"https://tianqi.xiaonvshi.com/city/101250101.html"},{"@type":"ListItem","position":12,"name":"西安市","url":"https://tianqi.xiaonvshi.com/city/101110101.html"},{"@type":"ListItem","position":13,"name":"济南","url":"https://tianqi.xiaonvshi.com/city/101120101.html"},{"@type":"ListItem","position":14,"name":"海口","url":"https://tianqi.xiaonvshi.com/city/101310101.html"},{"@type":"ListItem","position":15,"name":"昆明","url":"https://tianqi.xiaonvshi.com/city/101290101.html"},{"@type":"ListItem","position":16,"name":"合肥","url":"https://tianqi.xiaonvshi.com/city/101220101.html"},{"@type":"ListItem","position":17,"name":"郑州","url":"https://tianqi.xiaonvshi.com/city/101180101.html"},{"@type":"ListItem","position":18,"name":"南昌市","url":"https://tianqi.xiaonvshi.com/city/101240101.html"},{"@type":"ListItem","position":19,"name":"沈阳","url":"https://tianqi.xiaonvshi.com/city/101070101.html"},{"@type":"ListItem","position":20,"name":"哈尔滨","url":"https://tianqi.xiaonvshi.com/city/101050101.html"},{"@type":"ListItem","position":21,"name":"长春","url":"https://tianqi.xiaonvshi.com/city/101060101.html"},{"@type":"ListItem","position":22,"name":"呼和浩特","url":"https://tianqi.xiaonvshi.com/city/101080101.html"},{"@type":"ListItem","position":23,"name":"石家庄","url":"https://tianqi.xiaonvshi.com/city/101090101.html"},{"@type":"ListItem","position":24,"name":"太原","url":"https://tianqi.xiaonvshi.com/city/101100101.html"},{"@type":"ListItem","position":25,"name":"乌鲁木齐市","url":"https://tianqi.xiaonvshi.com/city/101130101.html"},{"@type":"ListItem","position":26,"name":"拉萨","url":"https://tianqi.xiaonvshi.com/city/101140101.html"},{"@type":"ListItem","position":27,"name":"西宁","url":"https://tianqi.xiaonvshi.com/city/101150101.html"},{"@type":"ListItem","position":28,"name":"兰州","url":"https://tianqi.xiaonvshi.com/city/101160101.html"},{"@type":"ListItem","position":29,"name":"银川","url":"https://tianqi.xiaonvshi.com/city/101170101.html"},{"@type":"ListItem","position":30,"name":"贵阳","url":"https://tianqi.xiaonvshi.com/city/101260101.html"},{"@type":"ListItem","position":31,"name":"南宁","url":"https://tianqi.xiaonvshi.com/city/101300101.html"}]}</script>
+</head>
+<body>
+<div class="container page-index">
+    <header class="hero home-hero">
+        <h1>肖女士天气</h1>
+        <p>查询全国城市天气、空气质量、未来天气和生活建议。</p>
+    </header>
+    <section class="search-card" aria-label="城市搜索">
+        <div class="search-row">
+            <input id="keyword" type="search" autocomplete="off" placeholder="请输入城市，如：北京 / 合肥 / 深圳 / 南山区 / 海淀区">
+            <button id="searchBtn" type="button">查询天气</button>
+        </div>
+        <div id="suggestions" class="suggestions"></div>
+    </section>
+    <main>
+        <section class="section">
+            <h2>热门城市</h2>
+            <div class="grid">
+                                    <a class="city-card" href="./city/101010100.html">
+                        <div class="name">北京</div>
+                        <div class="meta">北京</div>
+                    </a>
+                                    <a class="city-card" href="./city/101020100.html">
+                        <div class="name">上海</div>
+                        <div class="meta">上海</div>
+                    </a>
+                                    <a class="city-card" href="./city/101030100.html">
+                        <div class="name">天津</div>
+                        <div class="meta">天津</div>
+                    </a>
+                                    <a class="city-card" href="./city/101040100.html">
+                        <div class="name">重庆</div>
+                        <div class="meta">重庆</div>
+                    </a>
+                                    <a class="city-card" href="./city/101280101.html">
+                        <div class="name">广州</div>
+                        <div class="meta">广东 广州</div>
+                    </a>
+                                    <a class="city-card" href="./city/101210101.html">
+                        <div class="name">杭州</div>
+                        <div class="meta">浙江 杭州</div>
+                    </a>
+                                    <a class="city-card" href="./city/101190101.html">
+                        <div class="name">南京</div>
+                        <div class="meta">江苏 南京</div>
+                    </a>
+                                    <a class="city-card" href="./city/101200101.html">
+                        <div class="name">武汉</div>
+                        <div class="meta">湖北 武汉</div>
+                    </a>
+                                    <a class="city-card" href="./city/101270101.html">
+                        <div class="name">成都</div>
+                        <div class="meta">四川 成都</div>
+                    </a>
+                                    <a class="city-card" href="./city/101230101.html">
+                        <div class="name">福州</div>
+                        <div class="meta">福建 福州</div>
+                    </a>
+                                    <a class="city-card" href="./city/101250101.html">
+                        <div class="name">长沙市</div>
+                        <div class="meta">湖南 长沙市</div>
+                    </a>
+                                    <a class="city-card" href="./city/101110101.html">
+                        <div class="name">西安市</div>
+                        <div class="meta">陕西 西安市</div>
+                    </a>
+                                    <a class="city-card" href="./city/101120101.html">
+                        <div class="name">济南</div>
+                        <div class="meta">山东 济南</div>
+                    </a>
+                                    <a class="city-card" href="./city/101310101.html">
+                        <div class="name">海口</div>
+                        <div class="meta">海南 海口</div>
+                    </a>
+                                    <a class="city-card" href="./city/101290101.html">
+                        <div class="name">昆明</div>
+                        <div class="meta">云南 昆明</div>
+                    </a>
+                                    <a class="city-card" href="./city/101220101.html">
+                        <div class="name">合肥</div>
+                        <div class="meta">安徽 合肥</div>
+                    </a>
+                                    <a class="city-card" href="./city/101180101.html">
+                        <div class="name">郑州</div>
+                        <div class="meta">河南 郑州</div>
+                    </a>
+                                    <a class="city-card" href="./city/101240101.html">
+                        <div class="name">南昌市</div>
+                        <div class="meta">江西 南昌市</div>
+                    </a>
+                                    <a class="city-card" href="./city/101070101.html">
+                        <div class="name">沈阳</div>
+                        <div class="meta">辽宁 沈阳</div>
+                    </a>
+                                    <a class="city-card" href="./city/101050101.html">
+                        <div class="name">哈尔滨</div>
+                        <div class="meta">黑龙江 哈尔滨</div>
+                    </a>
+                                    <a class="city-card" href="./city/101060101.html">
+                        <div class="name">长春</div>
+                        <div class="meta">吉林 长春</div>
+                    </a>
+                                    <a class="city-card" href="./city/101080101.html">
+                        <div class="name">呼和浩特</div>
+                        <div class="meta">内蒙古 呼和浩特</div>
+                    </a>
+                                    <a class="city-card" href="./city/101090101.html">
+                        <div class="name">石家庄</div>
+                        <div class="meta">河北 石家庄</div>
+                    </a>
+                                    <a class="city-card" href="./city/101100101.html">
+                        <div class="name">太原</div>
+                        <div class="meta">山西 太原</div>
+                    </a>
+                                    <a class="city-card" href="./city/101130101.html">
+                        <div class="name">乌鲁木齐市</div>
+                        <div class="meta">新疆 乌鲁木齐市</div>
+                    </a>
+                                    <a class="city-card" href="./city/101140101.html">
+                        <div class="name">拉萨</div>
+                        <div class="meta">西藏 拉萨</div>
+                    </a>
+                                    <a class="city-card" href="./city/101150101.html">
+                        <div class="name">西宁</div>
+                        <div class="meta">青海 西宁</div>
+                    </a>
+                                    <a class="city-card" href="./city/101160101.html">
+                        <div class="name">兰州</div>
+                        <div class="meta">甘肃 兰州</div>
+                    </a>
+                                    <a class="city-card" href="./city/101170101.html">
+                        <div class="name">银川</div>
+                        <div class="meta">宁夏 银川</div>
+                    </a>
+                                    <a class="city-card" href="./city/101260101.html">
+                        <div class="name">贵阳</div>
+                        <div class="meta">贵州 贵阳</div>
+                    </a>
+                                    <a class="city-card" href="./city/101300101.html">
+                        <div class="name">南宁</div>
+                        <div class="meta">广西 南宁</div>
+                    </a>
+                            </div>
+        </section>
+    </main>
+    <footer>&copy;2026 <a href="https://www.xiaonvshi.com" target="_blank" rel="noopener noreferrer">肖女士</a> 版权所有</footer>
+</div>
+<script src="./app.js" defer></script>
+</body>
+</html>
+    
